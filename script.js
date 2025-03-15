@@ -81,9 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body text-center">
                         <i class="fas ${section.icon} fa-3x mb-3"></i>
                         <h5 class="card-title">${section.title}</h5>
-                        <a href="${id === 'crypto' ? section.articles[0].path : '#' + id}" class="btn btn-outline-primary mt-3">
-                            Explore
-                        </a>
+                        <a href="${id === 'crypto' ? 'cryptocurrency/index.html' : '#' + id}" class="btn btn-outline-primary mt-3">
                     </div>
                 </div>
             </div>
