@@ -1,4 +1,3 @@
-// Section data
 const SECTIONS = {
     'sports': { title: 'Sports', icon: 'fa-basketball-ball' },
     'travel': { title: 'Travel', icon: 'fa-plane' },
@@ -82,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <i class="fas ${section.icon} fa-3x mb-3"></i>
                         <h5 class="card-title">${section.title}</h5>
                         <a href="${id === 'crypto' ? 'cryptocurrency/index.html' : '#' + id}" class="btn btn-outline-primary mt-3">
+                            Explore
+                        </a>
                     </div>
                 </div>
             </div>
