@@ -1,0 +1,76 @@
+:root {
+    --buzzvibe-purple: #8A2BE2;
+    --buzzvibe-pink: #FF69B4;
+    --buzzvibe-cyan: #00CED1;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header styles */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--buzzvibe-purple), var(--buzzvibe-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Section cards */
+.section-card {
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom loading spinner */
+.loader {
+    border: 4px solid var(--bs-dark);
+    border-top: 4px solid var(--buzzvibe-purple);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Social links hover effect */
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--buzzvibe-purple) !important;
+}
+
+/* Search input styling */
+#searchInput {
+    border-radius: 20px;
+}
+
+/* Button hover effects */
+.btn-outline-primary:hover {
+    background: linear-gradient(45deg, var(--buzzvibe-purple), var(--buzzvibe-pink));
+    border-color: transparent;
+}
