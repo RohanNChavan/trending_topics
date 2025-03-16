@@ -79,26 +79,7 @@ console.log("BuzzVibe script loaded successfully");
 
 // Populate sections grid and setup search
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM Content loaded, populating sections");
-    const sectionsGrid = document.getElementById('sections-grid');
-
-    // Populate sections
-    for (const [id, section] of Object.entries(SECTIONS)) {
-        const sectionHTML = `
-            <div class="col-md-6 col-lg-3">
-                <div class="card section-card h-100">
-                    <div class="card-body text-center">
-                        <i class="fas ${section.icon} fa-3x mb-3"></i>
-                        <h5 class="card-title">${section.title}</h5>
-                        <a href="${id === 'crypto' ? 'cryptocurrency/index.html' : id === 'travel' ? 'travel/index.html' : id === 'sports' ? 'sports/index.html' : '#' + id}" class="btn btn-outline-primary mt-3">
-                            Explore
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `;
-        sectionsGrid.insertAdjacentHTML('beforeend', sectionHTML);
-    }
+    console.log("DOM Content loaded");
 
     // Enhanced search functionality
     const searchForm = document.querySelector('#searchForm');
