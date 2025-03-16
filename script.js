@@ -1,5 +1,5 @@
 const SECTIONS = {
-    'sports': { title: 'Sports', icon: 'fa-basketball-ball' },
+    'sports': { title: 'Sports', icon: 'fa-basketball-ball', articles: [] }, // Added articles array
     'travel': { title: 'Travel', icon: 'fa-plane' },
     'food': { title: 'Food', icon: 'fa-utensils' },
     'crypto': { 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body text-center">
                         <i class="fas ${section.icon} fa-3x mb-3"></i>
                         <h5 class="card-title">${section.title}</h5>
-                        <a href="${id === 'crypto' ? 'cryptocurrency/index.html' : id === 'travel' ? 'travel/index.html' : '#' + id}" class="btn btn-outline-primary mt-3">
+                        <a href="${id === 'crypto' ? 'cryptocurrency/index.html' : id === 'travel' ? 'travel/index.html' : id === 'sports' ? 'sports/index.html' : '#' + id}" class="btn btn-outline-primary mt-3">
                             Explore
                         </a>
                     </div>
