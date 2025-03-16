@@ -1,5 +1,9 @@
 /* Root variables and theming */
 :root {
+  --text-dark: #2d3748;
+  --text-muted: #718096;
+  --background-light: #ffffff;
+  --background-gray: #f7fafc;
   --primary-color: #6366f1;
   --secondary-color: #EC4899;
   --accent-color: #14b8a6;
