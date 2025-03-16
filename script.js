@@ -1,5 +1,15 @@
 const SECTIONS = {
-    'sports': { title: 'Sports', icon: 'fa-basketball-ball', articles: [] }, // Added articles array
+    'sports': { 
+        title: 'Sports', 
+        icon: 'fa-basketball-ball',
+        articles: [
+            {
+                title: "Kohli's Blunt Swipe & Silent Signals",
+                path: "sports/kohli-blunt-swipe.html",
+                description: "Decoding the Modern Maestro"
+            }
+        ]
+    },
     'travel': { title: 'Travel', icon: 'fa-plane' },
     'food': { title: 'Food', icon: 'fa-utensils' },
     'crypto': { 
