@@ -49,9 +49,115 @@ section {
   padding: calc(var(--section-spacing) * 1.5) 0;
   text-align: center;
   position: relative;
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #EC4899 100%);
   border-radius: 0 0 3rem 3rem;
   margin-bottom: 3rem;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1200') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.hero-categories {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(5px);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.category-badge:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.category-badge i {
+  margin-right: 0.5rem;
+}
+
+/* Improved card styling */
+.featured-card {
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.featured-card img {
+  transition: all 0.5s ease;
+}
+
+.featured-card:hover img {
+  transform: scale(1.05);
+}
+
+.featured-card .badge {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Improved typography */
+.display-4 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem;
+    border-radius: 0 0 2rem 2rem;
+  }
+  
+  .category-badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+  }
 }
 
 .hero-section::before {
